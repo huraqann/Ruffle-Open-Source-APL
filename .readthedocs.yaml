@@ -6,7 +6,7 @@ version: 2
 
 # Set the version of Python and other tools you might need
 build:
-  os: windows-7
+  os: "windows-7"
   tools:
     python: "3.6"
 
