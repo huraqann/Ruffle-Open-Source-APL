@@ -109,12 +109,15 @@ def p_comparison_more(p):
     operand1 = variables[p[1]] if isinstance(p[1], str) else p[1]
     operand2 = variables[p[3]] if isinstance(p[3], str) else p[3]
     p[0] = operand1 > operand2
-
+# Функции сравнения (выражение >||< выражение)
 def p_comparison_notmore(p):
     'comparison : expression NOTMORE expression'
     operand1 = variables[p[1]] if isinstance(p[1], str) else p[1]
     operand2 = variables[p[3]] if isinstance(p[3], str) else p[3]
     p[0] = operand1 < operand2
+
+
+
 # Функция корня (sqrt())
 def p_expression_sqrt(p):
     'expression : SQRT LPAREN expression RPAREN'
