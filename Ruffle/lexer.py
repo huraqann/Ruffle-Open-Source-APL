@@ -102,15 +102,7 @@ def p_expression(p):
                | ID
                | comparison
     '''
-    p[0] = p[1]
-
-def p_statement_while(p):
-    'statement : WHILE LPAREN expression RPAREN LFPAREN program RFPAREN'
-
-def p_statement_if(p):
-    'statement : IF LPAREN comparison RPAREN LFPAREN program RFPAREN'
-    if p[3]:
-        p[6]
+    p[0] = p[1]
 
 def p_comparison_more(p):
     'comparison : expression MORE expression'
@@ -123,7 +115,7 @@ def p_comparison_notmore(p):
     operand1 = variables[p[1]] if isinstance(p[1], str) else p[1]
     operand2 = variables[p[3]] if isinstance(p[3], str) else p[3]
     p[0] = operand1 < operand2
-
+# Функция корня (sqrt())
 def p_expression_sqrt(p):
     'expression : SQRT LPAREN expression RPAREN'
     p[0] = math.sqrt(p[3])
