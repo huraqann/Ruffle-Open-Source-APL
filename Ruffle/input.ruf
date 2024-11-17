@@ -1,5 +1,5 @@
-let x = 1;
-let y = 3;
-let z = 1 + 3;
-let a = z ** 3;
-print(sqrt(a);
+let b = 9;
+let c = 9 ** 2;
+let a = sqrt(c);
+let x = a > 10;
+print(x);
